@@ -105,12 +105,13 @@ public class BibliotecaMusical {
 		
 		
 		//Punto 6
-		PlaylistSimple g=new PlaylistSimple("copia");
-		g=(PlaylistSimple) loMejor.copiar();
-		System.out.println("Copia de lo mejor"+g.toString());
+		PlaylistSimple g;
+		g=loMejor.copiar();
+		System.out.println("Copia");
+		System.out.println(g.toString());
 		g.setNombre("LoMejor++");
 	    g.intercambiaroOrden(p3, p7);
-		System.out.println("Intercambio  "+g.toString());
+		System.out.println("Intercambio  "+g.toString()+"\n");
 		
 		//Punto 7
 		PlaylistAutomatica coleccionAutomatica=new PlaylistAutomatica(coleccion, artista1);
@@ -122,7 +123,7 @@ public class BibliotecaMusical {
 		coleccionAutomatica.agregarElemento(p13);
 		System.out.println("agregar pista e imprimir la lista automatica  "+coleccionAutomatica.toString());
 	
-	
+		
 	}
 	
 	

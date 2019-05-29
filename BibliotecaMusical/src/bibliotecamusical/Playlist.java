@@ -12,7 +12,7 @@ import java.util.*;
  * @author Mequi
  */
 public abstract class Playlist extends ElementoMusical {
-
+	
 	public ArrayList<Pista> buscar(Criterio c) {
 		ArrayList<Pista> aux = new ArrayList<>();
 		for (ElementoMusical e : getLista())

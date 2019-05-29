@@ -109,9 +109,4 @@ public class Pista extends ElementoMusical {
 	public int getCantidadElementos() {
 		return 1;
 	}
-
-	@Override
-	public ElementoMusical copiar() {
-		return this;
-	}
 }

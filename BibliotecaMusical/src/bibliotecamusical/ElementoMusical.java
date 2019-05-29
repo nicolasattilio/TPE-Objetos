@@ -13,8 +13,6 @@ import java.util.*;
  */
 public abstract class ElementoMusical {
 
-	public abstract ElementoMusical copiar();
-
 	public abstract ArrayList<Pista> buscar(Criterio c);
 
 	public abstract String toString();

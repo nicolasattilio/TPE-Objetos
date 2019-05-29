@@ -22,10 +22,5 @@ public class PlaylistAutomatica extends Playlist {
 		return ret;
 	}
 
-	@Override
-	public ElementoMusical copiar() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

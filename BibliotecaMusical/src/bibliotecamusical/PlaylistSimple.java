@@ -51,24 +51,16 @@ public class PlaylistSimple extends Playlist{
 		return new Vector<ElementoMusical>(this.coleccion);
 	}
 
-	public void setColeccion(Vector<ElementoMusical> coleccion) {
-		this.coleccion = coleccion;
-	}
-
 	@Override
 	public List<ElementoMusical> getLista(){
 		return new Vector<ElementoMusical>(this.coleccion);
 	}
-	@Override
-	public ElementoMusical copiar(){ 
-		PlaylistSimple g= new PlaylistSimple(getNombre());   
-		 for (Enumeration<ElementoMusical> e= coleccion.elements();e.hasMoreElements();)
-		 { 
-			 ElementoMusical em=((ElementoMusical) e.nextElement()).copiar(); 
-			 if (em != null) 
-				 g.AgregarElemento(em);
-		 }
-	         return  g;
+
+	public PlaylistSimple copiar(){ 
+		PlaylistSimple g= new PlaylistSimple("Copia de"+getNombre()); 
+			for(ElementoMusical cancionCopia:this.coleccion)
+				g.AgregarElemento(cancionCopia);
+			return  g;
 	}
 	
 	public void intercambiaroOrden (ElementoMusical e1,ElementoMusical e2){
@@ -77,10 +69,7 @@ public class PlaylistSimple extends Playlist{
 			if(coleccion.contains(e1) && coleccion.contains(e2)){
 				int posicion1 = coleccion.indexOf(e1);
 				int posicion2 = coleccion.indexOf(e2);
-				coleccion.remove(e1);
-				coleccion.remove(e2);
-				coleccion.add(posicion1,e2);
-				coleccion.add(posicion2,e1);	
+				Collections.swap(coleccion, posicion1, posicion2);
 			}
 	}
 	
